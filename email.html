@@ -5,75 +5,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email page</title>
+    <title>Tech Mail</title>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         * {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
 
-        .home {
+        body {
+            font-family: 'Baloo Bhaina 2', cursive;
             background-image: url(img/Log2.jpg);
-            background-repeat: no-repeat, repeat;
+            background-repeat: no-repeat;
             background-size: cover;
-            width: 100vw;
-            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url("img/bg1.jpg") no-repeat center center fixed;
         }
 
         .home__header {
-            color: white;
-            padding: 10px;
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.12) !important;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 50px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 900px;
+            border-radius: 5px;
         }
 
         .home__left {
-            width: 240px;
             display: flex;
             align-items: center;
-            padding-right: 30px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .home__left i {
+            font-size: 28px;
+            cursor: pointer;
+            margin-right: 10px;
         }
 
         .home__center {
-            flex-grow: 1;
-            margin-right: 96px;
-            background: rgba(241, 243, 244, 0.21);
             display: flex;
             align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .home__center span {
+            font-size: 24px;
             color: white;
-            border-radius: 8px;
-            padding: 10px;
+            margin-right: 10px;
         }
 
         .home__center input {
-            /* width: 50%; */
-            height: 25px;
             border: none;
-            background: none;
             outline: none;
-            margin-left: 10px;
+            background: none;
             color: white;
-            font-size: 16px;
-        }
-
-        .home__center input::placeholder {
-            font-size: 16px;
-            color: white;
+            font-size: 18px;
+            flex: 1;
         }
 
         .home__right {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-left: 50px;
-            width: 12%;
         }
 
+        .home__popover {
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -81,27 +94,20 @@
     <div class="home">
         <div class="home__header">
             <div class="home__left">
-                <i class="material-icons" style="cursor: pointer;margin-right: 4px;padding: 12px;">menu</i>
+                <i class="material-icons">menu</i>
                 Tech Mail
             </div>
             <div class="home__center">
-                <span class="material-icons">
-                    search
-                </span>
+                <span class="material-icons">search</span>
                 <input type="text" placeholder="Search Mail">
             </div>
             <div class="home__right">
                 <div class="home__popover">
-                <span class="material-icons" style="cursor:pointer">
-                    account_circle
-                    </span>
-
+                    <span class="material-icons">account_circle</span>
                 </div>
-
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
